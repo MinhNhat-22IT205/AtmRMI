@@ -210,7 +210,7 @@ class UserServiceImpl extends UnicastRemoteObject implements UserService {
 public class RMIServer {
     public static void main(String[] args) {
         try {
-            System.setProperty("java.rmi.server.hostname", "localhost");
+            System.setProperty("java.rmi.server.hostname", "192.168.1.10");
 
             UserService userService = new UserServiceImpl();
             Registry registry = LocateRegistry.createRegistry(1099);
